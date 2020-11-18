@@ -1,0 +1,25 @@
+version: "2.1"
+
+volumes:
+  shinobi:
+  videos:
+  mariadb:
+  plugins:
+
+services:
+  shinobi:
+    build: ./shinobi
+    privileged: true
+    ports:
+      - "80:8080/tcp"
+    volumes:
+      - shinobi:/config
+      - videos:/home/Shinobi/videos
+      - plugins:/home/Shinobi/plugins
+    links:
+      - mariadb
+
+  mariadb:
+    image: mariadb:10-bionic
+    volumes:
+      - mariadb:/var/lib/mysql
