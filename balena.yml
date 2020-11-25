@@ -1,0 +1,20 @@
+version: "2"
+slug: "balena-shinobi"
+name: "balena Shinobi CCTV"
+type: "sw.application"
+assets:
+  - url: "https://github.com/balena-io-playground/shinobi"
+    name: "repository"
+  - url: "https://raw.githubusercontent.com/balena-io-playground/shinobi/master/logo.jpg"
+    name: "logo"
+data:
+  description: "Shinobi CCTV stack for NVIDIA Jetson Nano with balenaCloud"
+  applicationEnvironmentVariables:
+    - TZ: 'America/Toronto'
+    - ADMIN_EMAIL: 'admin@shinobi.video'
+    - ADMIN_PASSWORD: 'admin'
+    - MYSQL_ROOT_PASSWORD: 'mysecretpassword'
+  defaultDeviceType: "jetson-nano"
+  supportedDeviceTypes:
+    - "jetson-nano"
+    - "jetson-nano-emmc"
