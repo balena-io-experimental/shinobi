@@ -34,11 +34,9 @@ Application envionment variables apply to all services within the application, a
 
 Log in as superuser to create your first user account. The default credentials are in your device logs.
 
-<http://mydevice.local/super>
+<device-url>/super
 
-Then log in to the dashboard and start adding monitors (cameras).
-
-<http://mydevice.local>
+Then log in to the dashboard by opening the device public url and start adding monitors (cameras).
 
 ## Contributing
 
